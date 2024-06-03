@@ -1,0 +1,19 @@
+﻿  Some_gamer_shit.cpp
+E:\gra_cpp\Some_gamer_shit\Some_gamer_shit\Player.h(53,22): warning C4244: "inicjowanie": konwersja z "double" do "int", możliwa utrata danych
+E:\gra_cpp\Some_gamer_shit\Some_gamer_shit\Player.h(176,26): warning C4244: "+=": konwersja z "double" do "int", możliwa utrata danych
+E:\gra_cpp\Some_gamer_shit\Some_gamer_shit\Some_gamer_shit.cpp(26,62): warning C4267: "argument": konwersja z "size_t" do "_Ty", możliwa utrata danych
+          with
+          [
+              _Ty=int
+          ]
+E:\gra_cpp\Some_gamer_shit\Some_gamer_shit\Some_gamer_shit.cpp(38,61): warning C4267: "argument": konwersja z "size_t" do "_Ty", możliwa utrata danych
+          with
+          [
+              _Ty=int
+          ]
+E:\gra_cpp\Some_gamer_shit\Some_gamer_shit\Some_gamer_shit.cpp(50,62): warning C4267: "argument": konwersja z "size_t" do "_Ty", możliwa utrata danych
+          with
+          [
+              _Ty=int
+          ]
+  Some_gamer_shit.vcxproj -> E:\gra_cpp\Some_gamer_shit\x64\Debug\Some_gamer_shit.exe
