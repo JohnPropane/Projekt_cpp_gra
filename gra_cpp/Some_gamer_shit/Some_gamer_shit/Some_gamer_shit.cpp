@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include "Dragon.h"
 #include "Player.h"
 #include "Item.h"
@@ -24,37 +24,40 @@ void generateLoot(Player &player, vector<Weapon> weapon, vector<Armor>armor, vec
 			std::random_device rd; // obtain a random number from hardware
 			std::mt19937 gen(rd()); // seed the generator
 			std::uniform_int_distribution<> distr(0, weapon.size() - 1); // define the range
-			choosenWeapon = weapon[distr(gen)];
+			int rand_num = distr(gen);
+			choosenWeapon = weapon[rand_num];
 			cout << "-----------------------------------------" << endl;
-			cout << i + 1 << ". " << weapon[distr(gen)].name << endl;
-			cout << weapon[distr(gen)].description << endl;
-			cout << weapon[distr(gen)].type << endl;
-			cout << weapon[distr(gen)].rarity << endl;
-			cout << weapon[distr(gen)].minDamage << " - " << weapon[distr(gen)].maxDamage << " DMG" << endl;
+			cout << i + 1 << ". " << weapon[rand_num].name << endl;
+			cout << weapon[rand_num].description << endl;
+			cout << weapon[rand_num].type << endl;
+			cout << weapon[rand_num].rarity << endl;
+			cout << weapon[rand_num].minDamage << " - " << weapon[rand_num].maxDamage << " DMG" << endl;
 		}
 		else if (i == 1) {
 			std::random_device rd; // obtain a random number from hardware
 			std::mt19937 gen(rd()); // seed the generator
 			std::uniform_int_distribution<> distr(0, armor.size() - 1); // define the range
-			choosenArmor = armor[distr(gen)];
+			int randomNum = distr(gen);
+			choosenArmor = armor[randomNum];
 			cout << "-----------------------------------------" << endl;
-			cout << i + 1 << ". " << armor[distr(gen)].name << endl;
-			cout << armor[distr(gen)].description << endl;
-			cout << armor[distr(gen)].type << endl;
-			cout << armor[distr(gen)].rarity << endl;
-			cout << armor[distr(gen)].resistanceTypeStr << ": " << armor[distr(gen)].value << endl;
+			cout << i + 1 << ". " << armor[randomNum].name << endl;
+			cout << armor[randomNum].description << endl;
+			cout << armor[randomNum].type << endl;
+			cout << armor[randomNum].rarity << endl;
+			cout << armor[randomNum].resistanceTypeStr << ": " << armor[randomNum].value << endl;
 		}
 		else {
 			std::random_device rd; // obtain a random number from hardware
 			std::mt19937 gen(rd()); // seed the generator
 			std::uniform_int_distribution<> distr(0, potion.size() - 1); // define the range
-			choosenPotion = potion[distr(gen)];
+			int randomNum = distr(gen);
+			choosenPotion = potion[randomNum];
 			cout << "-----------------------------------------" << endl;
-			cout << i + 1 << ". " << potion[distr(gen)].name << endl;
-			cout << potion[distr(gen)].description << endl;
-			cout << potion[distr(gen)].type << endl;
-			cout << potion[distr(gen)].rarity << endl;
-			cout << potion[distr(gen)].effectStr << ": " << potion[distr(gen)].effectValue << endl;
+			cout << i + 1 << ". " << potion[randomNum].name << endl;
+			cout << potion[randomNum].description << endl;
+			cout << potion[randomNum].type << endl;
+			cout << potion[randomNum].rarity << endl;
+			cout << potion[randomNum].effectStr << ": " << potion[randomNum].effectValue << endl;
 		}
 
 	}
@@ -347,6 +350,9 @@ void startFight(Player &player, Dragon &dragon) {
 					std::system("PAUSE");
 					break;
 				}
+			}
+			else {
+				cout << "Wrong input! Try again." << endl;
 			}
 		}
 	}
